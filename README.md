@@ -1,4 +1,4 @@
-# Official Implementation of "MTAttack: Multi-Target Backdoor Attacks against Vision-Language Models"
+# Official Implementation of "MTAttack: Multi-Target Backdoor Attacks against Large Vision-Language Models"
 
 
 ---
