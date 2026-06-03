@@ -1,0 +1,35 @@
+# config.yaml
+
+model:
+  family: "llava-1.5"
+  model_path: "liuhaotian/llava-v1.5-7b"
+  device: "cuda"
+
+dataset:
+  dataset_split_path: "../data/dataset_config.json"
+  image_set: "flickr30k"
+  split_sample_num:
+    train: 1200
+    valid: 200
+
+trigger_optim:
+  train:
+    batch_size: 16
+    epoch_num: 600
+    seed: 99
+    
+  optimizer:
+    lr_psp: 0.6
+    lr_tpa: 0.5
+    tpa_weight: 0.001
+    early_stop: null
+
+  lr_scheduler:  
+      type: "cosine"
+      cosine:
+        warmup_epochs: 30
+        eta_min: 0.01
+
+trigger:
+  eps: 24
+  num: 4
